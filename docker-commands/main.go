@@ -1,6 +1,7 @@
 package main
 
 import (
+	"docker-commands/help"
 	"docker-commands/images"
 	"flag"
 	"fmt"
@@ -20,6 +21,8 @@ func main() {
 	switch *command {
 	case images.ImagesName:
 		c = images.NewImages()
+	case help.HelperName:
+		c = help.NewHelper()
 	default:
 		return
 	}
