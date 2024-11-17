@@ -1,6 +1,7 @@
 package main
 
 import (
+	"docker-commands/general"
 	"docker-commands/help"
 	"docker-commands/hub"
 	"docker-commands/images"
@@ -26,6 +27,8 @@ func main() {
 		c = help.NewHelper()
 	case hub.HubName:
 		c = hub.NewHub()
+	case general.GeneralName:
+		c = general.NewGeneral()
 	default:
 		return
 	}
