@@ -6,6 +6,7 @@ import (
 	"vim-syntax/cursor"
 	cutpaste "vim-syntax/cut_paste"
 	"vim-syntax/edit"
+	"vim-syntax/exiting"
 	"vim-syntax/global"
 	"vim-syntax/help"
 	indenttext "vim-syntax/indent_text"
@@ -51,6 +52,8 @@ func main() {
 		c = cutpaste.NewCutPaste()
 	case indenttext.IndentTextName:
 		c = indenttext.NewIndentText()
+	case exiting.ExitingName:
+		c = exiting.NewExiting()
 	default:
 		c = help.NewHelp()
 	}
