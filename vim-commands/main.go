@@ -15,6 +15,7 @@ import (
 	maketext "vim-syntax/make_text"
 	markposition "vim-syntax/mark_position"
 	"vim-syntax/register"
+	searchmul "vim-syntax/search_mul"
 	searchreplace "vim-syntax/search_replace"
 	viusalcmd "vim-syntax/viusal_cmd"
 )
@@ -57,6 +58,8 @@ func main() {
 		c = exiting.NewExiting()
 	case searchreplace.SearchReplaceName:
 		c = searchreplace.NewSearchReplace()
+	case searchmul.SearchMulName:
+		c = searchmul.NewSearchMul()
 	default:
 		c = help.NewHelp()
 	}
