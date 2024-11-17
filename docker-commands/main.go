@@ -2,6 +2,7 @@ package main
 
 import (
 	"docker-commands/help"
+	"docker-commands/hub"
 	"docker-commands/images"
 	"flag"
 	"fmt"
@@ -23,6 +24,8 @@ func main() {
 		c = images.NewImages()
 	case help.HelperName:
 		c = help.NewHelper()
+	case hub.HubName:
+		c = hub.NewHub()
 	default:
 		return
 	}
