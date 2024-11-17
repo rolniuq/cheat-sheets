@@ -17,6 +17,7 @@ import (
 	"vim-syntax/register"
 	searchmul "vim-syntax/search_mul"
 	searchreplace "vim-syntax/search_replace"
+	"vim-syntax/tab"
 	viusalcmd "vim-syntax/viusal_cmd"
 )
 
@@ -60,6 +61,8 @@ func main() {
 		c = searchreplace.NewSearchReplace()
 	case searchmul.SearchMulName:
 		c = searchmul.NewSearchMul()
+	case tab.TabName:
+		c = tab.NewTab()
 	default:
 		c = help.NewHelp()
 	}
