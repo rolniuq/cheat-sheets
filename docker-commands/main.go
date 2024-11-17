@@ -1,6 +1,7 @@
 package main
 
 import (
+	"docker-commands/containers"
 	"docker-commands/general"
 	"docker-commands/help"
 	"docker-commands/hub"
@@ -29,6 +30,8 @@ func main() {
 		c = hub.NewHub()
 	case general.GeneralName:
 		c = general.NewGeneral()
+	case containers.ContainersName:
+		c = containers.NewContainers()
 	default:
 		return
 	}
