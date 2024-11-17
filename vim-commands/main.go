@@ -15,6 +15,7 @@ import (
 	maketext "vim-syntax/make_text"
 	markposition "vim-syntax/mark_position"
 	"vim-syntax/register"
+	searchreplace "vim-syntax/search_replace"
 	viusalcmd "vim-syntax/viusal_cmd"
 )
 
@@ -54,6 +55,8 @@ func main() {
 		c = indenttext.NewIndentText()
 	case exiting.ExitingName:
 		c = exiting.NewExiting()
+	case searchreplace.SearchReplaceName:
+		c = searchreplace.NewSearchReplace()
 	default:
 		c = help.NewHelp()
 	}
