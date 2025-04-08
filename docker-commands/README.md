@@ -13,3 +13,7 @@ go run main.go -c="{command}"
 ```bash
 go run main.go -c="help"
 ```
+
+### Architecture
+
+![Docker Architecture](architecture.svg)
